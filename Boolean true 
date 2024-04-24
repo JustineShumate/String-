@@ -1,0 +1,6 @@
+void main (){ 
+// boolean true 
+bool myBool = true; 
+print ( " Boolean: $myBool");
+
+}
