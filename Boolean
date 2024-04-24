@@ -1,15 +1,4 @@
 void main(){ 
-bool isAdmin = true;
-bool isGuest = false;
-
-if (isAdmin) {
-  print("Welcome, Admin!");
-} else {
-  print("Welcome, Guest!");
-}
-
-if (isGuest) {
-  print("You are a guest user.");
-} else {
-  print("You are not a guest user.");
-}
+// boolean false
+bool myBool = false; 
+print ( " Boolean : $myBool");
