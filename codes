@@ -1,0 +1,8 @@
+void main() {
+    // String 
+  // Get user input
+  print("Wondergurl",);
+
+  // Print a greeting
+  print("Hello, Wondergurl,");
+}
