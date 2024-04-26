@@ -1,0 +1,5 @@
+void main() {
+  // double 
+double num1 = 19.45;
+  print('Double: $num1');
+}
