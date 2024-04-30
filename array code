@@ -1,0 +1,19 @@
+void main() {
+  // Declare and initialize an array
+  List<String> colors = ['red', 'green', 'blue'];
+
+  // Access elements
+  print(colors[0]); // prints 'red'
+
+  // Change an element
+  colors[0] = 'yellow';
+  print(colors[0]); // prints 'yellow'
+
+  // Add an element
+  colors.add('purple');
+  print(colors); // prints '[yellow, green, blue, purple]'
+
+  // Remove an element
+  colors.remove('green');
+  print(colors); // prints '[yellow, blue, purple]'
+}
