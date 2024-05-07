@@ -1,0 +1,9 @@
+List<dynamic> dynamicArray = [];
+ void main(){
+// Add elements to the array
+dynamicArray.add(10);
+dynamicArray.add("Hello");
+dynamicArray.add(true);
+
+// Print the array
+print(dynamicArray); // [10, Hello, true]
