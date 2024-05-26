@@ -1,0 +1,6 @@
+void main ( ) {
+int myInt = 5; 
+double myDouble = 3.14; 
+print ( ' myInt: $myInt');
+print ( ' myDouble: $myDouble ');
+}
