@@ -1,0 +1,55 @@
+
+import 'package:flutter/material.dart';
+
+class ProfilePage extends StatelessWidget {
+  final String username;
+  final String email;
+  final String profilePicture;
+
+  ProfilePage({
+    required this.username,
+    required this.email,
+    required this.profilePicture,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Exa'),
+        centerTitle: false,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage(profilePicture), // Use the passed profile picture
+            ),
+            SizedBox(height: 16),
+            Text(
+              username, // Use the passed username
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              email, // Use the passed email
+              style: TextStyle(fontSize: 18),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+`
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => ProfilePage(
+      username: 'JohnDoe',
+      email: 'johndoe@example.com',
+      profilePicture: 'assets/johndoe_profile_picture.png',
+    ),
+  ),
+)
