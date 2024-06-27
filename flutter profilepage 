@@ -1,0 +1,59 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: ProfilePage(
+        username: 'John Doe',
+        email: 'johndoe@example.com',
+      ),
+    );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  final String username;
+  final String email;
+
+  ProfilePage({required this.username, required this.email});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Exa'),
+        centerTitle: false,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/default_profile_picture.png'),
+              // Replace with user profile picture
+            ),
+            SizedBox(height: 16),
+            Text(
+              username,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            SizedBox(height: 8),
+            Text(
+              email,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+`
