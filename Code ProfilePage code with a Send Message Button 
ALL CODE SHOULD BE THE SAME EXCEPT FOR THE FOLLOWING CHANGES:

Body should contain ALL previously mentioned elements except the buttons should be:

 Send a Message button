@@ -1,0 +1,64 @@
+`
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: ProfilePage(),
+    ),
+  );
+}
+
+class ProfilePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile'),
+      ),
+      body: Column(
+        children: [
+          // Profile Picture
+          CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage('assets/profile_picture.png'),
+          ),
+          // Name and Handle
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Text(
+                  'John Doe',
+                  style: TextStyle(fontSize: 24),
+                ),
+                Text(
+                  '@johndoe',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+          // Bio
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Software Engineer, Flutter enthusiast, and coffee lover.',
+              style: TextStyle(color: Colors.grey),
+            ),
+          ),
+          // Send Message Button
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ElevatedButton(
+              onPressed: () {
+                // Navigate to messaging page or show messaging dialog
+              },
+              child: Text('Send a Message'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
